@@ -8,9 +8,13 @@ import javax.persistence.*;
 @Entity
 @Table(name = "userevent")
 public class UserEvent {
-    @OneToMany
-    User userAtEvent;
 
-    @OneToMany
-    Events events;
+    @Id
+    @GeneratedValue
+    int id;
+
+//    @ManyToMany
+//    User userAtEvents;
+
+
 }
