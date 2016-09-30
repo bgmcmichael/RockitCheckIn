@@ -5,6 +5,10 @@ import javax.persistence.*;
 @Table(name = "friends")
 public class Friends {
 
+    @Id
+    @GeneratedValue
+    int id;
+
     @ManyToOne
     User user;
 

@@ -2,12 +2,17 @@ package com.tiy.RocketCheckIn;
 
 
 import javax.persistence.*;
+import java.util.List;
+
 @Entity
 @Table(name = "users")
 public class User {
     @Id
     @GeneratedValue
     int id;
+
+    @ManyToOne
+    Events userEvents;
 
     @Column(nullable = false)
     String name;
@@ -17,6 +22,9 @@ public class User {
 
     @Column(nullable = false, unique = true)
     String email;
+
+    @Column(nullable = false)
+    Boolean isAdmin;
 
     public int getId() {
         return id;
